@@ -31,14 +31,14 @@ app.get("/bmi", (req, res) => {
 
         res.status(HTTP_STATUS_BAD_REQUEST)
            .json({ erfolg   : false,
-                   nachricht: "Bitte URL-Parameter >kg< angeben" })
+                   nachricht: "Bitte URL-Parameter >kg< angeben." })
         return;
     }
     if (cmStr === undefined) {
 
         res.status(HTTP_STATUS_BAD_REQUEST)
             .json({ erfolg   : false,
-                    nachricht: "Bitte URL-Parameter >cm< angeben" })
+                    nachricht: "Bitte URL-Parameter >cm< angeben." })
         return;
     }
 
@@ -71,7 +71,7 @@ app.get("/bmi", (req, res) => {
     else if (bmi < 30.0) { interpretation = "Prä-Adipositas";      }
     else if (bmi < 35.0) { interpretation = "Moderate Adipositas"; }
     else if (bmi < 40.0) { interpretation = "Starke Adipositas";   }
-    else { interpretation = "Extreme Adipositas"; }
+    else                 { interpretation = "Extreme Adipositas";  }
 
     res.status(HTTP_STATUS_OK)
        .json({ erfolg   : true,

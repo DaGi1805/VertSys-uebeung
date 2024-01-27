@@ -17,7 +17,7 @@ Beispiel für Abfrage mit fehlender Körpergröße: http://localhost:8080/bmi?kg
 ```
 {
   "erfolg"   : false,
-  "nachricht": "Bitte URL-Parameter >cm< angeben"
+  "nachricht": "Bitte URL-Parameter >cm< angeben."
 }
 ```
 

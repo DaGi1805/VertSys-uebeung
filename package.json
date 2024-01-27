@@ -1,0 +1,14 @@
+{
+  "name": "nodejs_express_bmi",
+  "version": "1.0.0",
+  "description": "REST-API zur BMI-Berechnung mit expressjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

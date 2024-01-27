@@ -80,6 +80,11 @@ app.get("/bmi", (req, res) => {
 
 });
 
+
+// statische Dateien ausliefern
+app.use( express.static("public") );
+
+
 const portNummer = 8080;
 app.listen( portNummer,
             () => { console.log(`Web-Server lauscht auf Port ${portNummer}`); }

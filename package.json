@@ -6,9 +6,13 @@
   "scripts": {
     "start": "node app.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "MDecker-MobileComputing",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MDecker-MobileComputing/Nodejs_Express_BMI"
   }
 }

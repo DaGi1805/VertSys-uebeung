@@ -65,7 +65,4 @@ Beispiel für Abfrage mit fehlender Körpergröße: http://localhost:8080/bmi?kg
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License)
 for the files in this repository.
 
-The Ajax variant of the application contains [jQuery](https://jquery.org) which is published
-under the terms of [MIT license](https://jquery.org/license/).
-
 <br>

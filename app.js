@@ -2,6 +2,8 @@ const express = require("express");
 
 const app = express();
 
+const PORT_NUMMER = 8080;
+
 const HTTP_STATUS_BAD_REQUEST = 400;
 const HTTP_STATUS_OK          = 200;
 
@@ -85,7 +87,6 @@ app.get("/bmi", (req, res) => {
 app.use( express.static("public") );
 
 
-const portNummer = 8080;
-app.listen( portNummer,
-            () => { console.log(`Web-Server lauscht auf Port ${portNummer}`); }
+app.listen( PORT_NUMMER,
+            () => { console.log(`Web-Server auf Port ${PORT_NUMMER} gestartet.`); }
           );

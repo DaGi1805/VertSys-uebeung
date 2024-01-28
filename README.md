@@ -12,10 +12,9 @@ Einfache REST-API für [BMI-Berechnung](https://www.barmer.de/gesundheit-versteh
 
 <br>
 
-```
-npm install
-npm start
-```
+Nach Klonen/Download des Repos: `npm install`
+
+Webserver mit REST-API starten: `npm start`
 
 <br>
 

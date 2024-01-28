@@ -10,9 +10,22 @@
 
   <h1>BMI-Berechnung mit Express</h1>
 
+  <h2>Aufrufe normal</h2>
   <ul>
     <li><a href="/bmi?kg=80&cm=190"   target="_blank">BMI für  80 kg und 190 cm</a></li>
     <li><a href="/bmi?kg=100&cm=170"  target="_blank">BMI für 100 kg und 170 cm</a></li>
   </ul>
+
+  <br>
+
+  <h2>Aufrufe Fehler</h2>
+  <ul>
+    <li><a href="/bmi"              target="_blank">Keine URL-Parameter</a></li>
+    <li><a href="/bmi?kg=100"       target="_blank">Nur URL-Parameter für Gewicht</a></li>
+    <li><a href="/bmi?cm=175"       target="_blank">Nur URL-Parameter für Größe</a></li>
+    <li><a href="/bmi?cm=175&kg=xx" target="_blank">Ungültiger Wert für URL-Parameter "kg"</a></li>
+    <li><a href="/bmi?kg=90&cm=xx " target="_blank">Ungültiger Wert für URL-Parameter "cm"</a></li>
+  </ul>
+
 
 </body>

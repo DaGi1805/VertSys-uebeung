@@ -83,10 +83,10 @@ app.get("/bmi", (req, res) => {
 });
 
 
-// statische Dateien aus Unterordner "public/" bereitstellen
+// statische Dateien (z.B. "index.html") aus Unterordner "public/" bereitstellen
 app.use( express.static("public") );
 
-
+// Web-Server starten
 app.listen( PORT_NUMMER,
             () => { console.log(`Web-Server auf Port ${PORT_NUMMER} gestartet.`); }
           );

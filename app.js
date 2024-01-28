@@ -83,7 +83,7 @@ app.get("/bmi", (req, res) => {
 });
 
 
-// statische Dateien ausliefern
+// statische Dateien aus Unterordner "public/" bereitstellen
 app.use( express.static("public") );
 
 

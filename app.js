@@ -33,14 +33,14 @@ app.get("/bmi", (req, res) => {
 
         res.status(HTTP_STATUS_BAD_REQUEST)
            .json({ erfolg   : false,
-                   nachricht: "Bitte URL-Parameter >kg< angeben." })
+                   nachricht: "Bitte URL-Parameter >kg< angeben." });
         return;
     }
     if (cmStr === undefined) {
 
         res.status(HTTP_STATUS_BAD_REQUEST)
             .json({ erfolg   : false,
-                    nachricht: "Bitte URL-Parameter >cm< angeben." })
+                    nachricht: "Bitte URL-Parameter >cm< angeben." });
         return;
     }
 

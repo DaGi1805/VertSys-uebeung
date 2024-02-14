@@ -49,7 +49,7 @@ app.get("/bmi", (req, res) => {
 
         res.status(HTTP_STATUS_BAD_REQUEST)
            .json({ erfolg   : false,
-                   nachricht: `Wert "${kgStr}" für URL-Parameter >kg< ist keine int-Zahl.` });
+                   nachricht: `Wert "${kgStr}" für URL-Parameter >kg< ist keine Zahl.` });
         return;
     }
     const cm = parseInt(cmStr);
@@ -57,7 +57,7 @@ app.get("/bmi", (req, res) => {
 
         res.status(HTTP_STATUS_BAD_REQUEST)
            .json({ erfolg   : false,
-                   nachricht: `Wert "${cmStr}" für URL-Parameter >cm< ist keine int-Zahl.` });
+                   nachricht: `Wert "${cmStr}" für URL-Parameter >cm< ist keine Zahl.` });
         return;
     }
 

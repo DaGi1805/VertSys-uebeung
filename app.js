@@ -20,7 +20,7 @@ const HTTP_STATUS_OK          = 200;
  * * HTTP-Status-Code 400 (Bad Request) bei fehlerhaften URL-Parametern
  * * HTTP-Status-Code 200 (OK) bei erfolgreicher Berechnung
  *
- * Erklärung BMI:
+ * Erklärung "Body Mass Index" (BMI) und Interpretation der Werte, siehe z.B. hier:
  * https://www.barmer.de/gesundheit-verstehen/leben/abnehmen-diaet/body-mass-index/bmi-rechner-1004244
  */
 app.get("/bmi", (req, res) => {

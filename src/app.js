@@ -23,22 +23,22 @@ const HTTP_STATUS_OK          = 200;
  * Erklärung "Body Mass Index" (BMI) und Interpretation der Werte, siehe z.B. hier:
  * https://www.barmer.de/gesundheit-verstehen/leben/abnehmen-diaet/body-mass-index/bmi-rechner-1004244
  */
-app.get("/bmi", (req, res) => {
+app.get("/bmi", (request, response) => {
 
     // überprüfen, ob URL-Parameter vorhanden sind
-    const kgStr = req.query.kg;
-    const cmStr = req.query.cm;
+    const kgStr = request.query.kg;
+    const cmStr = request.query.cm;
 
     if (kgStr === undefined) {
 
-        res.status(HTTP_STATUS_BAD_REQUEST)
+        response.status(HTTP_STATUS_BAD_REQUEST)
            .json({ erfolg   : false,
                    nachricht: "Bitte URL-Parameter >kg< angeben." });
         return;
     }
     if (cmStr === undefined) {
 
-        res.status(HTTP_STATUS_BAD_REQUEST)
+        response.status(HTTP_STATUS_BAD_REQUEST)
             .json({ erfolg   : false,
                     nachricht: "Bitte URL-Parameter >cm< angeben." });
         return;
@@ -47,7 +47,7 @@ app.get("/bmi", (req, res) => {
     const kg = parseInt(kgStr);
     if (isNaN(kg)) {
 
-        res.status(HTTP_STATUS_BAD_REQUEST)
+        response.status(HTTP_STATUS_BAD_REQUEST)
            .json({ erfolg   : false,
                    nachricht: `Wert "${kgStr}" für URL-Parameter >kg< ist keine Zahl.` });
         return;
@@ -55,7 +55,7 @@ app.get("/bmi", (req, res) => {
     const cm = parseInt(cmStr);
     if (isNaN(cm)) {
 
-        res.status(HTTP_STATUS_BAD_REQUEST)
+        response.status(HTTP_STATUS_BAD_REQUEST)
            .json({ erfolg   : false,
                    nachricht: `Wert "${cmStr}" für URL-Parameter >cm< ist keine Zahl.` });
         return;
@@ -75,7 +75,7 @@ app.get("/bmi", (req, res) => {
     else if (bmi < 40.0) { interpretation = "Starke Adipositas";   }
     else                 { interpretation = "Extreme Adipositas";  }
 
-    res.status(HTTP_STATUS_OK)
+    response.status(HTTP_STATUS_OK)
        .json({ erfolg   : true,
                bmi      : bmi,
                nachricht: interpretation });

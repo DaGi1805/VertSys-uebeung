@@ -79,7 +79,6 @@ app.get("/bmi", (request, response) => {
        .json({ erfolg   : true,
                bmi      : bmi,
                nachricht: interpretation });
-
 });
 
 

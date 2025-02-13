@@ -2,7 +2,8 @@
 
 <br>
 
-Einfache REST-API für [BMI-Berechnung](https://www.barmer.de/gesundheit-verstehen/leben/abnehmen-diaet/body-mass-index/bmi-rechner-1004244) mit [Nodejs](https://nodejs.org) und [Express](https://expressjs.com).
+Einfache REST-API für [BMI-Berechnung](https://www.barmer.de/gesundheit-verstehen/leben/abnehmen-diaet/body-mass-index/bmi-rechner-1004244) 
+mit [Nodejs](https://nodejs.org) und [Express](https://expressjs.com).
 
 <br>
 
@@ -48,7 +49,7 @@ Beispiel für Abfrage mit fehlender Körpergröße: http://localhost:8080/bmi?kg
 Beispiel für Abfrage mit fehlender Körpergröße: http://localhost:8080/bmi?kg=80&cm=asdf
 ```
 {
-  "erfolg": false,
+  "erfolg"   : false,
   "nachricht": "Wert \"asdf\" für URL-Parameter >cm< ist keine int-Zahl."
 }
 ```
